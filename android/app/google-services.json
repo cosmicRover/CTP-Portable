@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "947118298035",
+    "firebase_url": "https://ctp-portable.firebaseio.com",
+    "project_id": "ctp-portable",
+    "storage_bucket": "ctp-portable.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:947118298035:android:438bef1fe1d7a0ce9bf1c6",
+        "android_client_info": {
+          "package_name": "dev.findjoy.ctp_portable"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "947118298035-qfmend11f8bu82g98rq1a7e7ofae0m3a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "dev.findjoy.ctp_portable",
+            "certificate_hash": "caf1a63260fb3633d8cf387a3789172aedd89c94"
+          }
+        },
+        {
+          "client_id": "947118298035-bkhvif92v08t3ln1ebqofii46k94f06p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBecwKEDTKhooiMGTNz2bicD0OJNlPfBIs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "947118298035-bkhvif92v08t3ln1ebqofii46k94f06p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
