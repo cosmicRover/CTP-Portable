@@ -22,6 +22,8 @@ dependencies:
   carousel_slider:
   http:
   google_fonts: ^1.1.0
+  percent_indicator: ^2.1.5
+  polls: ^0.2.2
 
 dev_dependencies:
   flutter_test:
@@ -34,6 +36,14 @@ flutter:
   assets:
     - assets/top.png
     - assets/bottom.png
+    - assets/home.png
+    - assets/session.png
+    - assets/people.png
+    - assets/study.png
+    - assets/top_red.png
+    - assets/bottom_red.png
+    - assets/cal.png
+    - assets/background.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

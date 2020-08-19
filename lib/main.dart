@@ -1,5 +1,7 @@
 import 'package:ctpportable/dashboard/dashboard.dart';
+import 'package:ctpportable/sessions/sessions.dart';
 import 'package:ctpportable/signin/signin.dart';
+import 'package:ctpportable/studygroup/study_groups.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 

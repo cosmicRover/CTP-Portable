@@ -1,72 +1,42 @@
 import 'package:ctpportable/app_constants/app_colors.dart';
-import 'package:ctpportable/dashboard/User.dart';
 import 'package:ctpportable/supporting_widgets/profile_view.dart';
+import 'package:ctpportable/supporting_widgets/red_view_frames.dart';
 import 'package:ctpportable/supporting_widgets/top_sheet.dart';
 import 'package:ctpportable/supporting_widgets/upcoming_assignments.dart';
+import 'package:ctpportable/supporting_widgets/upcoming_sessions.dart';
 import 'package:ctpportable/supporting_widgets/view_frames.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Dashboard extends StatefulWidget {
-  @override
-  _DashboardState createState() => _DashboardState();
-}
-
-class _DashboardState extends State<Dashboard> {
+class Sessions extends StatelessWidget {
   final _appColor = AppColors();
-  Future<User> data;
-
-  @override
-  Future<void> initState() {
-    print("DASHBOARD INIT GETS CALLED");
-    data = FetchUser().fetchUser();
-    super.initState();
-  }
 
   @override
   Widget build(BuildContext context) {
     final _height = MediaQuery.of(context).size.height;
 
     return Scaffold(
-      body: FutureBuilder<User>(
-        future: data,
-        builder: (context, snapshot) {
-          if (snapshot.hasData) {
-            return Stack(
-              children: [
-                ProfileView(
-                    _height / 2,
-                    snapshot.data.name,
-                    snapshot.data.track,
-                    snapshot.data.profile_pic_url,
-                    snapshot.data.cohort,
-                    snapshot.data.percentage_completed),
-                Align(
-                  alignment: Alignment.centerLeft,
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 30.0),
-                    child: Text(
-                      "Upcoming Assignments",
-                      style: GoogleFonts.montserrat(
-                          color: _appColor.appDarkIndigo,
-                          fontSize: 20.0,
-                          fontWeight: FontWeight.w400),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 264),
-                  child: Align(
-                    alignment: Alignment.center,
-                    child: Container(height: 216, child: UpcomingAssignments()),
-                  ),
-                ),
-                ViewFrames(),
-              ],
-            );
-          }
-          return Center(child: CircularProgressIndicator());
-        },
+      body: Stack(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(top:100, left: 30),
+            child: Text(
+              "Upcoming \nSessions",
+              style: GoogleFonts.montserrat(
+                  color: _appColor.appDarkIndigo,
+                  fontSize: 30.0,
+                  fontWeight: FontWeight.w400),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 170),
+            child: UpcomingSessions(
+                "Wed \n6:30pm",
+                "Session 2 \nIntroduction to CSS",
+                "An intro to HTML. An intro to HTML.\nAn intro to HTML."),
+          ),
+          RedViewFrames(),
+        ],
       ),
       floatingActionButton: Container(
         height: 75.0,
