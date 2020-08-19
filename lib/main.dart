@@ -1,4 +1,5 @@
 import 'package:ctpportable/dashboard/dashboard.dart';
+import 'package:ctpportable/mentors/mentors.dart';
 import 'package:ctpportable/sessions/sessions.dart';
 import 'package:ctpportable/signin/signin.dart';
 import 'package:ctpportable/studygroup/study_groups.dart';
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(),
-      home: Dashboard(),
+      home: SignIn(),
     );
   }
 }

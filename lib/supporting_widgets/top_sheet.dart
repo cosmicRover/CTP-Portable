@@ -1,5 +1,6 @@
 import 'package:ctpportable/app_constants/app_colors.dart';
 import 'package:ctpportable/dashboard/dashboard.dart';
+import 'package:ctpportable/mentors/mentors.dart';
 import 'package:ctpportable/sessions/sessions.dart';
 import 'package:ctpportable/studygroup/study_groups.dart';
 import 'package:flutter/material.dart';
@@ -103,31 +104,39 @@ class TopSheetBody extends StatelessWidget {
                       ],
                     ),
                     onTap: () {
-                      Navigator.pushReplacement(context,
-                          MaterialPageRoute(builder: (context) => StudyGroups()));
+                      Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => StudyGroups()));
                     },
                   ),
                   SizedBox(
                     height: 31.0,
                   ),
-                  Row(
-                    children: [
-                      Image.asset(
-                        "assets/people.png",
-                        height: 30.0,
-                        width: 30,
-                      ),
-                      SizedBox(
-                        width: 11.25,
-                      ),
-                      Text(
-                        "Mentors",
-                        style: GoogleFonts.montserrat(
-                            color: _appColor.appDarkIndigo,
-                            fontSize: 25.0,
-                            fontWeight: FontWeight.w500),
-                      )
-                    ],
+                  GestureDetector(
+                    child: Row(
+                      children: [
+                        Image.asset(
+                          "assets/people.png",
+                          height: 30.0,
+                          width: 30,
+                        ),
+                        SizedBox(
+                          width: 11.25,
+                        ),
+                        Text(
+                          "Mentors",
+                          style: GoogleFonts.montserrat(
+                              color: _appColor.appDarkIndigo,
+                              fontSize: 25.0,
+                              fontWeight: FontWeight.w500),
+                        )
+                      ],
+                    ),
+                    onTap: () {
+                      Navigator.pushReplacement(context,
+                          MaterialPageRoute(builder: (context) => Mentors()));
+                    },
                   ),
                   SizedBox(
                     height: 31.0,

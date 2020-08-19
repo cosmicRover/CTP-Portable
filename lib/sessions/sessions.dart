@@ -1,4 +1,5 @@
 import 'package:ctpportable/app_constants/app_colors.dart';
+import 'package:ctpportable/sessions/sessions_netwrok_call.dart';
 import 'package:ctpportable/supporting_widgets/profile_view.dart';
 import 'package:ctpportable/supporting_widgets/red_view_frames.dart';
 import 'package:ctpportable/supporting_widgets/top_sheet.dart';
@@ -8,35 +9,54 @@ import 'package:ctpportable/supporting_widgets/view_frames.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Sessions extends StatelessWidget {
+class Sessions extends StatefulWidget {
+  @override
+  _SessionsState createState() => _SessionsState();
+}
+
+class _SessionsState extends State<Sessions> {
   final _appColor = AppColors();
+  Future<List<SessionsDataModel>> data;
+
+  @override
+  Future<void> initState() {
+    print("DASHBOARD INIT GETS CALLED");
+    data = FetchSessions().fetchSessions();
+
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
     final _height = MediaQuery.of(context).size.height;
 
     return Scaffold(
-      body: Stack(
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(top:100, left: 30),
-            child: Text(
-              "Upcoming \nSessions",
-              style: GoogleFonts.montserrat(
-                  color: _appColor.appDarkIndigo,
-                  fontSize: 30.0,
-                  fontWeight: FontWeight.w400),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(top: 170),
-            child: UpcomingSessions(
-                "Wed \n6:30pm",
-                "Session 2 \nIntroduction to CSS",
-                "An intro to HTML. An intro to HTML.\nAn intro to HTML."),
-          ),
-          RedViewFrames(),
-        ],
+      body: FutureBuilder(
+        future: data,
+        builder: (context, snapshot){
+          if(snapshot.hasData){
+            return Stack(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(top: 100, left: 30),
+                  child: Text(
+                    "Upcoming \nSessions",
+                    style: GoogleFonts.montserrat(
+                        color: _appColor.appDarkIndigo,
+                        fontSize: 30.0,
+                        fontWeight: FontWeight.w400),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 170),
+                  child: UpcomingSessions(snapshot.data),
+                ),
+                RedViewFrames(),
+              ],
+            );
+          }
+          return Center(child: CircularProgressIndicator(),);
+        },
       ),
       floatingActionButton: Container(
         height: 75.0,

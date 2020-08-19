@@ -1,15 +1,13 @@
 import 'package:ctpportable/app_constants/app_colors.dart';
+import 'package:ctpportable/sessions/sessions_netwrok_call.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class UpcomingSessions extends StatelessWidget {
   ///this will be an array of items
-  final sessionDate;
-  final sessionTitle;
-  final sessionDetail;
+  final List<SessionsDataModel> data;
 
-  const UpcomingSessions(
-      this.sessionDate, this.sessionTitle, this.sessionDetail);
+  const UpcomingSessions(this.data);
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +15,7 @@ class UpcomingSessions extends StatelessWidget {
 
     return ListView.builder(
         shrinkWrap: true,
-        itemCount: 5,
+        itemCount: data.length,
         itemBuilder: (BuildContext context, int index) {
           return Padding(
             padding: const EdgeInsets.all(15),
@@ -45,7 +43,7 @@ class UpcomingSessions extends StatelessWidget {
                                 height: 6,
                               ),
                               Text(
-                                sessionDate,
+                                data[index].session_date,
                                 style: GoogleFonts.montserrat(
                                     color: _colors.appPink,
                                     fontSize: 15.0,
@@ -63,7 +61,7 @@ class UpcomingSessions extends StatelessWidget {
                             Padding(
                               padding: const EdgeInsets.only(top: 6),
                               child: Text(
-                                sessionTitle,
+                                data[index].topic,
                                 overflow: TextOverflow.ellipsis,
                                 style: GoogleFonts.montserrat(
                                     color: _colors.appLightBlue,
@@ -74,7 +72,7 @@ class UpcomingSessions extends StatelessWidget {
                             Padding(
                               padding: const EdgeInsets.only(top: 10),
                               child: Text(
-                                sessionDetail,
+                                data[index].session_detail,
                                 overflow: TextOverflow.ellipsis,
                                 style: GoogleFonts.montserrat(
                                     color: Colors.white,

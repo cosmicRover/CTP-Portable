@@ -1,15 +1,20 @@
 import 'package:ctpportable/app_constants/app_colors.dart';
+import 'package:ctpportable/dashboard/user.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class UpcomingAssignments extends StatelessWidget {
+  final List<DashboardSessions> assignments;
+
+  const UpcomingAssignments(this.assignments);
+
   @override
   Widget build(BuildContext context) {
     AppColors _colors = AppColors();
 
     return ListView.builder(
         scrollDirection: Axis.horizontal,
-        itemCount: 90,
+        itemCount: assignments.length,
         itemBuilder: (BuildContext context, int index) {
           return Padding(
             padding: const EdgeInsets.only(left: 15),
@@ -24,7 +29,7 @@ class UpcomingAssignments extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.only(left: 8.0, top: 20),
                       child: Text(
-                        "Due 08/31",
+                        assignments[index].due.toString(),
                         style: GoogleFonts.montserrat(
                             color: _colors.appPink,
                             fontSize: 20.0,
@@ -36,7 +41,7 @@ class UpcomingAssignments extends StatelessWidget {
                       child: Padding(
                         padding: const EdgeInsets.only(left: 8),
                         child: Text(
-                          "CTP Completion Form",
+                          assignments[index].name.toString(),
                           style: GoogleFonts.montserrat(
                               color: Colors.white,
                               fontSize: 18.0,

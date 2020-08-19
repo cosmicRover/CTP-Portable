@@ -1,5 +1,5 @@
 import 'package:ctpportable/app_constants/app_colors.dart';
-import 'package:ctpportable/dashboard/User.dart';
+import 'package:ctpportable/dashboard/user.dart';
 import 'package:ctpportable/supporting_widgets/profile_view.dart';
 import 'package:ctpportable/supporting_widgets/top_sheet.dart';
 import 'package:ctpportable/supporting_widgets/upcoming_assignments.dart';
@@ -20,6 +20,9 @@ class _DashboardState extends State<Dashboard> {
   Future<void> initState() {
     print("DASHBOARD INIT GETS CALLED");
     data = FetchUser().fetchUser();
+
+    print(data);
+
     super.initState();
   }
 
@@ -58,7 +61,10 @@ class _DashboardState extends State<Dashboard> {
                   padding: const EdgeInsets.only(top: 264),
                   child: Align(
                     alignment: Alignment.center,
-                    child: Container(height: 216, child: UpcomingAssignments()),
+                    child: Container(
+                        height: 216,
+                        child: UpcomingAssignments(
+                            snapshot.data.assignments_due_this_week)),
                   ),
                 ),
                 ViewFrames(),

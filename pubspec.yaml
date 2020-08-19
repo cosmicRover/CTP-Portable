@@ -23,7 +23,7 @@ dependencies:
   http:
   google_fonts: ^1.1.0
   percent_indicator: ^2.1.5
-  polls: ^0.2.2
+  url_launcher: ^5.5.0
 
 dev_dependencies:
   flutter_test:
@@ -44,6 +44,14 @@ flutter:
     - assets/bottom_red.png
     - assets/cal.png
     - assets/background.png
+    - assets/mentor_frame.png
+    - assets/mentor_bottom.png
+    - assets/in.png
+    - assets/mail.png
+    - assets/slacks.png
+    - assets/login_bottom.png
+    - assets/logo.png
+    - assets/goog.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
