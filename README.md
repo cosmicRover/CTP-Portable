@@ -10,11 +10,11 @@ A cross platform mobile application that allows CTP fellows to keeps track of th
 
 ##### :heavy_check_mark: CTP Students can View their profile/up-coming assignments
 
- powered by: CUstom built CTP API (https://tranquil-hollows-06480.herokuapp.com/user) :robot:
+ powered by: Custom built CTP API (https://tranquil-hollows-06480.herokuapp.com/user) :robot:
 
 ##### :heavy_check_mark: CTP Students can view the upcoming CTP sessions and their details
 
- powered by: CUstom built CTP API (https://tranquil-hollows-06480.herokuapp.com/sessions) :robot:
+ powered by: Custom built CTP API (https://tranquil-hollows-06480.herokuapp.com/sessions) :robot:
 
 ##### :heavy_check_mark: CTP Students can form their own study groups and participate in discussions
 
@@ -22,7 +22,7 @@ A cross platform mobile application that allows CTP fellows to keeps track of th
 
 ##### :heavy_check_mark: CTP Students can view available mentors and contact them through email, linkedin, slack
 
- App powered by: Flutter (https://flutter.dev) :zap:
+Powered by: Custom built CTP API (https://tranquil-hollows-06480.herokuapp.com/mentors) :robot:
  
  ##### :heavy_check_mark: :heavy_check_mark: CTP Students can access this app on iOS and Android
 
@@ -37,7 +37,7 @@ A cross platform mobile application that allows CTP fellows to keeps track of th
 
 # PITCH/DEMO
 
-[![CTP-Portable](https://youtu.be/x2her2pSFOY)
+![CTP-Portable](https://youtu.be/x2her2pSFOY)
 
 
 
