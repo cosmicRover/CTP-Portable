@@ -30,10 +30,10 @@ A cross platform mobile application that allows CTP fellows to keeps track of th
  
 # Landing Page
 [Repo](https://github.com/rubenvecg/CTPportable-website)
-<img src="https://media.giphy.com/media/jRH65hUoVaNmGw7i5a/giphy.gif" width="1280" height="720" />
+<img src="https://media.giphy.com/media/gIrTdHBvfJKb4BMWvu/giphy.gif"/>
 
 # UI
-<img src="https://media.giphy.com/media/Lqr66UW9dVeTPsxkKJ/giphy.gif" width="1280" height="720" />
+<img src="https://media.giphy.com/media/Lqr66UW9dVeTPsxkKJ/giphy.gif"/>
 
 # PITCH/DEMO
 
