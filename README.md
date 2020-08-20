@@ -1,6 +1,6 @@
 # CTP-Portable :school_satchel: :notebook: :nerd_face: :iphone: 
 
-A cross platform mobile application that allows smartphone users to identify, track, learn, and discover bird species.
+A cross platform mobile application that allows CTP fellows to keeps track of their assignments, sessions, study groups, and communicate with mentors.
 
 # USER STORIES
 
