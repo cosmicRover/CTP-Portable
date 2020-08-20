@@ -1,16 +1,49 @@
-# ctpportable
+# CTP-Portable :school_satchel: :notebook: :nerd_face: :iphone: 
 
-A new Flutter application.
+A cross platform mobile application that allows smartphone users to identify, track, learn, and discover bird species.
 
-## Getting Started
+# USER STORIES
 
-This project is a starting point for a Flutter application.
+##### :heavy_check_mark: Users can log in with a Google Account
 
-A few resources to get you started if this is your first Flutter project:
+ powered by: Firebase (https://firebase.google.com/) :fire: 
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+##### :heavy_check_mark: CTP Students can View their profile/up-coming assignments
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+ powered by: CUstom built CTP API (https://tranquil-hollows-06480.herokuapp.com/user) :robot:
+
+##### :heavy_check_mark: CTP Students can view the upcoming CTP sessions and their details
+
+ powered by: CUstom built CTP API (https://tranquil-hollows-06480.herokuapp.com/sessions) :robot:
+
+##### :heavy_check_mark: CTP Students can form their own study groups and participate in discussions
+
+ powered by: Firebase (https://firebase.google.com/) :fire: 
+
+##### :heavy_check_mark: CTP Students can view available mentors and contact them through email, linkedin, slack
+
+ App powered by: Flutter (https://flutter.dev) :zap:
+ 
+ ##### :heavy_check_mark: :heavy_check_mark: CTP Students can access this app on iOS and Android
+
+ App powered by: Flutter (https://flutter.dev) :zap:
+ 
+# Landing Page
+[Repo](https://github.com/rubenvecg/CTPportable-website)
+<img src="https://media.giphy.com/media/jRH65hUoVaNmGw7i5a/giphy.gif" width="1280" height="720" />
+
+# UI
+<img src="https://media.giphy.com/media/Lqr66UW9dVeTPsxkKJ/giphy.gif" width="1280" height="720" />
+
+# PITCH/DEMO
+
+[![CTP-Portable](https://youtu.be/x2her2pSFOY)
+
+
+
+
+
+
+
+
+
